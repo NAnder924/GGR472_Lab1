@@ -1,0 +1,150 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalie's Class Route</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- stylistic choices for the webpage including the background, navigation bar, and boxes -->
+        <style> 
+            /* colour of the webpage and font */
+            body {
+                background-color: #000435;
+                color: #FFFFFF;
+            }
+/* colour for the navigation bar */
+            .navbar {
+                background-color: #000435;
+                color: #FFFFFF;
+            }
+/* colour for various attributes of the navigation bar */
+            .navbar .navbar-brand,
+            .navbar .nav-link,
+            .navbar .dropdown-item {
+                color: #000435;
+            }
+
+            /* colour fo rvarious attributes of the navigation bar */
+            .navbar .navbar-brand:hover,
+            .navbar .nav-link:hover,
+            .navbar .dropdown-item:hover {
+                color: #FFFFFF;
+            }
+/* button colour  */
+            .btn {
+                background-color: red;
+                border-color: black;
+            }
+/* button colour when hovered over by mouse */
+            .btn:hover {
+                background-color: darkred;
+                border-color: black;
+            }
+
+            /* colour of link to Pedaal cafe website */
+            a[href="https://www.pedaal.com/"] {
+                color: red;
+            }
+
+            /* colour of link to Pedaal cafe website when hovered on my mouse */
+            a[href="https://www.pedaal.com/"]:hover {
+                color: darkred;
+            }
+
+            /* collour of boxes */
+            .box {
+                background-color: #1a1a5e;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            /* margin of boxes */
+            .box p {margin-bottom: 20px;
+            }
+
+        </style>
+</head>
+
+<body>
+    <!-- creating a navigating bar with text-->
+    <nav class="navbar navbar-expand-lg w-100">
+        <div class="container text-center p-3 mb-2 bg-white">
+            <a class="navbar-brand" href="#">GGR472 - Developing Web Maps</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- adding an option, Home, to the navigation bar -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <!-- adding an option, Link, to the navigation bar -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <!-- creating a dropdown for the navigation bar -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <!-- creating links for each of the dropdown options -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://support.sendible.com/hc/article_attachments/360059727732">Don't press me</a></li>
+                            <li><a class="dropdown-item" href="https://media.tenor.com/1TfNpPx9CzMAAAAM/krissed.gif">Also don't press me</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Creating another container for text -->
+    <div class="container">
+        <div>
+            <h1>Natalie's Class Route!</h1>
+            <p>This website shows you the location of my classes and where I typically end my day (Pedaal Cafe)<br></p>
+        </div>
+
+        <!-- creating a box to encompass text and the first button -->
+        <div class="box">
+            <p>This will take you to the map of University of Toronto buildings and their corresponding codes.</p>
+            <button type="button" class="btn btn-primary" id="my-btn">UofT Buildings Map</button>
+        </div>
+
+        <!-- creating another box to encompass text and the second button -->
+        <div class="box">
+            <p>This will take you to a geojson file which has the coordinates of each of my class buildings and my favourite cafe.</p>
+            <button type="button" class="btn btn-primary" id="col2-btn">Geojson file</button>
+        </div>
+
+        <!-- Adding another container for text and a link to a website -->
+        <div>
+            Click here for my favourite cafe<a target=”_blank” href="https://www.pedaal.com/"> Pedaal Cafe</a></p>
+        </div>
+    </div>
+
+    <!-- Source of external JavaScript files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Stating that clicking the button, my-btn, will take viewer to this link -->
+    <script>
+        document.getElementById("my-btn").addEventListener("click", function () {
+            window.open("https://hcp2010.physics.utoronto.ca/Map_of_Campus.pdf", "_blank");
+        });
+
+        // stating that clicking the button, col2-btn, will take viewer to this link
+        document.getElementById("col2-btn").addEventListener("click", function () {
+            window.open("/Users/natalieanderson/Documents/GitHub/GGR472 Lab1/map (1).geojson", "_blank");
+        });
+    </script>
+
+    <!-- adding an image at the bottom of the website -->
+<div class="container text-center mt-5">
+        <img src="https://magazine.utoronto.ca/wp-content/uploads/2018/09/Daniels-HR-1-171018-00044-NormLi.png" alt="University of Toronto Campus" class="img-fluid" style="max-width: 100%; height: auto;">
+    </div>
+
+<body>
+
+</html>
