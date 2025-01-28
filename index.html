@@ -25,7 +25,7 @@
                 color: #000435;
             }
 
-            /* colour fo rvarious attributes of the navigation bar */
+            /* colour for various attributes of the navigation bar */
             .navbar .navbar-brand:hover,
             .navbar .nav-link:hover,
             .navbar .dropdown-item:hover {
@@ -73,22 +73,23 @@
     <nav class="navbar navbar-expand-lg w-100">
         <div class="container text-center p-3 mb-2 bg-white">
             <a class="navbar-brand" href="#">GGR472 - Developing Web Maps</a>
+            <!-- Make navigation bar collapsable on small screen -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- adding an option, Home, to the navigation bar -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <!-- adding an option, Link, to the navigation bar -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <!-- creating a dropdown for the navigation bar -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Dropdown
-                        </a>
+                        </button>
                         <!-- creating links for each of the dropdown options -->
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="https://support.sendible.com/hc/article_attachments/360059727732">Don't press me</a></li>
@@ -131,12 +132,12 @@
     <!-- Stating that clicking the button, my-btn, will take viewer to this link -->
     <script>
         document.getElementById("my-btn").addEventListener("click", function () {
-            window.open("https://hcp2010.physics.utoronto.ca/Map_of_Campus.pdf", "_blank");
+            window.open("https://hcp2010.physics.utoronto.ca/Map_of_Campus.pdf");
         });
 
         // stating that clicking the button, col2-btn, will take viewer to this link
         document.getElementById("col2-btn").addEventListener("click", function () {
-            window.open("/Users/natalieanderson/Documents/GitHub/GGR472 Lab1/map (1).geojson", "_blank");
+            window.open("/Users/natalieanderson/Documents/GitHub/GGR472 Lab1/map (1).geojson");
         });
     </script>
 
